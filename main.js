@@ -74,7 +74,7 @@ console.log(typeof age);
 
 
 
-//================= Strings
+//================= STRING
 /*
 fName = "Jason"
 lName = "Etienne"
@@ -101,7 +101,7 @@ console.log(list.split(","));
 
 
 
-//================= Arrays
+//================= ARRAYS
 /*
 const num = new Array(1,2,3,4,5,6); // using a constructer, not really used any more
 console.log(num);
@@ -145,7 +145,7 @@ console.log(x.indexOf(1));
 
 
 
-//================= Object Literals
+//================= OBJECT LITERALS
 /*
 const person = {
   fName: "Jason",
@@ -210,5 +210,249 @@ console.log(toDos[1].text);
 const toDosJSON = JSON.stringify(toDos);
 console.log(toDosJSON);
 */
+
+
+
+
+
+//================= FOR LOOPS
+/*
+for(let i = 0; i<10; i++){
+    console.log(i);
+}
+
+for(let i = 0; i<10; i++){
+    console.log(`For loop number: ${i}` );
+}
+*/
+
+
+
+
+//================= WHILE LOOPS
+/*
+let i = 0;
+while(i<10){
+    console.log(i);
+    i++;
+}
+
+let j = 0;
+while(j<10){
+    console.log(`While loop number: ${j}` );
+    j++;
+}
+*/
+
+
+
+
+//================= LOOP THROUGH AN ARRAY
+/*
+const toDos = [
+    {
+        id:1,
+        text:"study",
+        isComplete: true
+    },
+    {
+        id:2,
+        text:"read",
+        isComplete: true
+    },
+    {
+        id:3,
+        text:"exercise",
+        isComplete: false
+    },
+    {
+        id:4,
+        text:"sleep",
+        isComplete: true
+    }
+];
+
+
+// not the best way to loop through an Array
+
+for (let i = 0; i< toDos.length; i++) {
+    console.log(toDos[i].text);
+    }
+
+console.log("----------------")
+
+// better way would be 
+for(let i of toDos){
+    console.log(i);
+}
+
+console.log("----------------")
+
+for(let i of toDos){
+    console.log(i.text);
+}
+*/
+
+
+// high order array methods, prob bet way to iterate through a loop through an aray
+
+
+
+
+
+//================= For Each, Map (new array from an existing array), Filter (new aray based on a condition)
+/*
+const toDos = [
+    {
+        id:1,
+        text:"study",
+        isComplete: true
+    },
+    {
+        id:2,
+        text:"read",
+        isComplete: true
+    },
+    {
+        id:3,
+        text:"exercise",
+        isComplete: false
+    },
+    {
+        id:4,
+        text:"sleep",
+        isComplete: true
+    }
+];
+
+
+//================= FOR EACH
+toDos.forEach(function(toDos){
+    console.log(toDos.text);
+
+})
+
+console.log("----------------")
+
+
+
+//================= MAP
+const toDoText = toDos.map(function(toDos){
+    return toDos.text;
+})
+
+console.log(toDoText);
+
+
+
+console.log("----------------")
+
+
+
+//================= Filter eg return when a condition is TRUE
+const toDoCompleted = toDos.filter(function(toDos){
+    return toDos.isComplete === true;
+});
+
+console.log(toDoCompleted);
+
+
+console.log("----------------")
+
+
+
+//================= CHAINING ARRAY METHODS
+const toDoCompletedAndText = toDos.filter(function(toDos){
+    return toDos.isComplete === true;
+}).map(function(toDos){
+    return toDos.text;
+});
+
+console.log(toDoCompletedAndText);
+
+*/
+
+
+
+
+
+
+
+
+//================= CONDITIONALS
+/*
+const x = 10;
+if (x==10) {
+    console.log("x is 10");
+}
+
+
+const y = "10";
+if (y===10) {
+    console.log("y is 10"); // not eqaul to the data type string/num
+} else if(y > 10){
+    console.log("y is greater than 10")
+} else{
+    console.log("y is less than 10");
+}
+
+
+//================= Multiple conditions
+
+
+const x = 2;
+const y = 25;
+if (x > 5 || y > 10) {
+    console.log("x greater than 5 OR y is greater than 25"); 
+} 
+
+
+const i = 2;
+const j = 25;
+if (i > 5 && j > 10) {
+    console.log("x greater than 5 AND y is greater than 25"); // this is false so nothing logged to console
+} 
+*/
+
+
+//================= Ternary Operator - ?= set var, :=else (Shorthand if statment can be use to assign variables based on a condition)
+const x = 10;
+const colour = x>10 ? "red" : "blue";
+console.log(colour);
+
+
+
+
+
+
+
+//================= SWITCHES
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
