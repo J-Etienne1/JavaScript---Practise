@@ -416,10 +416,11 @@ if (i > 5 && j > 10) {
 
 
 //================= Ternary Operator - ?= set var, :=else (Shorthand if statment can be use to assign variables based on a condition)
+/*
 const x = 10;
 const colour = x>10 ? "red" : "blue";
 console.log(colour);
-
+*/
 
 
 
@@ -427,6 +428,21 @@ console.log(colour);
 
 
 //================= SWITCHES
+/*
+const x = 11;
+const colour = x>10 ? "red" : "blue";
+switch(colour){
+    case "red":
+        console.log("colour is red");
+        break;
+    case "blue":
+        console.log("colour is blue");
+        break;
+    default:
+        console.log("colour is not red or blue ")
+        break
+}
+*/
 
 
 
@@ -436,11 +452,50 @@ console.log(colour);
 
 
 
+//================= FUNCTIONS
+/*    
+function addNums(num1,num2){
+    console.log(num1 + num2);
+}
+addNums(5,4);
+
+//addNums(); // prints NaN = Not A Number
 
 
 
 
-    
+// setting default values for the params
+function addNums2(num3 = 20,num4 = 15){
+    console.log(num3 + num4);
+}
+addNums2(); // passing in values into our call will overwrite the default values set
+
+
+
+
+// In most cases we wont be loogin to a console but will be returning a value
+function addNums3(num5,num6){
+    return num5 + num6;
+}
+addNums3(5,5);
+// of then want to console log the return, wrap call in a consloe.log
+console.log(addNums3(5,5));
+
+
+
+//================= Arrow Functions
+const addNums4 = (num7,num8) => num7 + num8;
+
+addNums4(100,100)
+console.log(addNums4(100,100));
+
+
+// if only using 1 param can shorten arrow function as so
+const addNums5 = num9 => num9 + 5;
+
+addNums4(16)
+console.log(addNums5(16));
+*/
 
 
 
@@ -449,10 +504,39 @@ console.log(colour);
 
 
 
+//================= OBJECT ORIENTATED PROGRAMMING
+/*
+// constructor functions should start with a capital letter
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob); // create a date constructor to make date objects
+    this.getBirthYear = function(){
+        return this.dob.getFullYear();
+    }
+
+    this.getFullName = function(){
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+// we then instantiate the ojects with the constructor function above
+const person1 = new Person("Jason", "Etienne", "07-25-1984"); // this creates a person object
+const person2 = new Person("Jane", "Doe", "07-25-1991"); 
+const person3 = new Person("Nick", "Cave", "07-25-1957"); 
 
 
+console.log(person1,person2,person3);
+console.log(person3.firstName);
+console.log(person3.firstName, person3.lastName);
+// using date object
+console.log(person1.dob.getFullYear());
 
 
+// adding methods to an object on line 514 & line 518
+console.log(person1.getBirthYear());
+console.log(person1.getFullName());
+*/
 
 
-
+//================= PROTOTYPES
