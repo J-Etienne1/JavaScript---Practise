@@ -539,4 +539,100 @@ console.log(person1.getFullName());
 */
 
 
+
+
 //================= PROTOTYPES
+/*
+function Person(firstName, lastName, dob){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);    
+}
+
+
+Person.prototype.getBirthYear = function(){
+    return this.dob.getFullYear();
+}
+
+
+Person.prototype.getFullName = function(){
+    return `${this.firstName} ${this.lastName}`
+}
+
+const person1 = new Person("Jason", "Etienne", "07-25-1984"); 
+const person2 = new Person("Jane", "Doe", "07-25-1991"); 
+
+console.log(person2.getFullName())
+console.log(person1);
+*/
+
+
+
+
+
+
+
+//================= Classes with Methods
+// Same as above just cleaner
+/*
+class Person{
+    constructor(firstName, lastName, dob){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+    getBirthYear(){
+        return this.dob.getFullYear();
+    }
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+const person1 = new Person("Jason", "Etienne", "07-25-1984"); 
+const person2 = new Person("Jane", "Doe", "07-25-1991"); 
+
+console.log(person2.getFullName())
+console.log(person1);
+*/
+
+
+
+
+
+
+
+//================= DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
